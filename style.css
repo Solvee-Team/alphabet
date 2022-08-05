@@ -26,15 +26,27 @@
 
 
 .letterDiv {
-  width: 80px;
-  height: 64px;
+  width: 70px;
+  height: 70px;
   display: flex;
   justify-content: center;
   align-items: center;
   font-size: 65px;
   color: #9C1F2A;
-  margin: 20px;
   font-family: 'Armcaps Unicode';
+  margin: 20px;
+}
+
+.letterDiv:hover {
+  background-image: url('patternn-04.svg');
+  background-position: center;
+  cursor: default;
+  font-size: 85px;
+  background-size: cover;
+  width: 135px;
+  height: 135px;
+  margin: 0;
+  padding: 45px;
 }
 
 .sidePattern {
