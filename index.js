@@ -6,9 +6,6 @@ window.onload = () => {
                         "Մ","Յ","Ն","Շ","Ո","Չ","Պ","Ջ","Ռ","Ս",
                         "Վ","Տ","Ր","Ց","Ու","Փ","Ք","Եվ","Օ","Ֆ"
     ];
-
-    // let letterDivs = document.createElement("div");
-    // letterDivs.className = "allLetter";
     alphabetArray.map( (val) => {
         let letterDivs = document.createElement("div");
         letterDivs.className = "allLetter";
