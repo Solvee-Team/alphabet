@@ -19,5 +19,30 @@ body h1{
     font-size: 48px;
     line-height: 58px;
     color: #72031A;
-
+    display: flex;
+    justify-content: center;
+    margin-top: 35px;
+    margin-bottom: 70px;
 }
+.container{
+    display: flex;
+}
+.mainPage{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+.letters{
+    display: flex;
+    flex-direction: column;
+}
+.lines{
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+    margin-bottom: 50px;
+}
+/* .lines:last-child{
+  justify-content:start
+} */
+
