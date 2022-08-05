@@ -1,0 +1,47 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+#allLettersBox{
+    display: flex;
+    flex-direction: row;
+    height: 100vh; 
+    width: 100%;
+    flex-wrap: wrap;
+}
+#allLettersBox div{
+    position: relative;
+    color: #9C1F2A;
+    margin: 5px 40px;
+    font-family: 'Armcaps Unicode';
+    font-style: normal;
+    font-size:60px;
+    padding: 5px 5px;
+}
+#main{
+    height: 100vh;
+    width: 100%;
+    background-color: beige;
+    display: flex;
+    flex-direction: row;
+}
+#text{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.textStyle{
+    font-family: "Bokonique";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 48px;
+    text-transform: uppercase;
+    color: #72031A;
+}
+.allLetter{
+    position: absolute;
+    width: 32px;
+    height: 60px;
+}
