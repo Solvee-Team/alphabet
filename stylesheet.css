@@ -1,0 +1,25 @@
+@font-face {
+    font-family: 'Armcaps Unicode';
+    src: url('fonts/ArmcapsU.eot');
+    src: url('fonts/ArmcapsU.eot?#iefix') format('embedded-opentype'),
+        url('fonts/ArmcapsU.woff2') format('woff2'),
+        url('fonts/ArmcapsU.woff') format('woff'),
+        url('fonts/ArmcapsU.ttf') format('truetype'),
+        url('fonts/ArmcapsU.svg#ArmcapsU') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Bokonique';
+    src: url('fonts/Bokonique-Regular.eot');
+    src: url('fonts/Bokonique-Regular.eot?#iefix') format('embedded-opentype'),
+        url('fonts/Bokonique-Regular.woff2') format('woff2'),
+        url('fonts/Bokonique-Regular.woff') format('woff'),
+        url('fonts/Bokonique-Regular.ttf') format('truetype'),
+        url('fonts/Bokonique-Regular.svg#Bokonique-Regular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
