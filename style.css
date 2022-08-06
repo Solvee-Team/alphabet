@@ -32,17 +32,32 @@ body h1{
     flex-direction: column;
     width: 100%;
 }
+.boardOfLetters{
+    display: flex;
+    justify-content: center;
+}
 .letters{
     display: flex;
-    flex-direction: column;
+    flex-wrap: wrap;
+    width: 80%;
 }
-.lines{
+.letters div{
+    width: 130px;
+    height: 130px;
     display: flex;
-    justify-content: space-evenly;
-    width: 100%;
-    margin-bottom: 50px;
+    justify-content: center;
+    align-items: center;
+    transition:0.4s;
 }
-/* .lines:last-child{
-  justify-content:start
-} */
-
+.letters div:hover{
+    background-image: url(IMGS/patternn-04\ 2.svg);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    transform: scale(1.2);
+    cursor: pointer;
+}
+.divForLetterInfo{
+    width: 500px;
+    height: 500px;
+    background-color: aqua;
+}
