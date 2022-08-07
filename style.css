@@ -3,6 +3,14 @@
     padding: 0;
     box-sizing: border-box;
 }
+@font-face {
+    font-family: 'Armcaps Unicode';
+    src: url('ArmcapsU.ttf')  format('truetype'); 
+  }
+  @font-face {
+    font-family: 'Bokonique';
+    src: url('Bokonique-Bold.otf') format('truetype');
+  }
 body{
     background-color: #F9F1DE;
     font-family: 'Armcaps Unicode';
@@ -16,48 +24,62 @@ body h1{
     font-family: 'Bokonique';
     font-style: normal;
     font-weight: 400;
-    font-size: 48px;
+    font-size: clamp(16px , 48px , 500px);
     line-height: 58px;
     color: #72031A;
     display: flex;
+    flex-wrap: wrap;
+    text-align: center;
     justify-content: center;
     margin-top: 35px;
-    margin-bottom: 70px;
+    margin-bottom: 50px;
 }
 .container{
     display: flex;
 }
+.img1 {
+    position: fixed;
+}
+.img2{
+    right: 0;
+    position: fixed;
+}
 .mainPage{
     display: flex;
     flex-direction: column;
-    width: 100%;
 }
 .boardOfLetters{
     display: flex;
     justify-content: center;
 }
-.letters{
+.divForAllLetters{
     display: flex;
     flex-wrap: wrap;
-    width: 80%;
+    justify-content: center;
+    width: 75%;
 }
-.letters div{
-    width: 130px;
-    height: 130px;
+.divWithLetter {
+    width: 140px;
+    height: 140px;
     display: flex;
     justify-content: center;
     align-items: center;
     transition:0.4s;
 }
-.letters div:hover{
+
+.divWithLetter:hover{
     background-image: url(IMGS/patternn-04\ 2.svg);
     background-repeat: no-repeat;
     background-size: 100% 100%;
     transform: scale(1.2);
     cursor: pointer;
 }
-.divForLetterInfo{
-    width: 500px;
-    height: 500px;
-    background-color: aqua;
+.emptyDiv{
+    width: 140px;
+    height: 140px;
 }
+@media screen and (max-width: 1872px) and (min-width: 1495px) {
+    body{
+        position: fixed;
+    }
+  }
