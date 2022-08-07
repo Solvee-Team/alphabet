@@ -14,18 +14,5 @@
         }
 
     }
-    // document.querySelectorAll('.divWithLetter').forEach(element => element.addEventListener('click' ,function getIndex(){
-    //     let indexText = document.createTextNode(arrOfLetters.indexOf(element.innerHTML) + "");
-    //     document.querySelector('.divForLetterInfo').appendChild(indexText) ;      
-    //     document.querySelector('.divForLetterInfo').style.display = "block" ;  
-    //     document.querySelector('.divForLetterInfo').innerHTML = document.querySelector('.divForLetterInfo').innerHTML.charAt(document.querySelector('.divForLetterInfo').innerHTML.length - 1);
-    //     let myBtn = document.createElement('button');
-    //     myBtn.className = ('btn');
-    //     let xForClose = document.createTextNode("x");
-    //     myBtn.appendChild(xForClose);
-    //     document.querySelector('.divForLetterInfo').appendChild(myBtn) ;   
-    //     myBtn.addEventListener('click' , function(){
-    //         document.querySelector('.divForLetterInfo').style.display = 'none'; 
-    //     })   
-    // }))
+
 
