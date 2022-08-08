@@ -1,17 +1,20 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
+
 @font-face {
     font-family: 'Armcaps Unicode';
-    src: url('ArmcapsU.ttf')  format('truetype'); 
-  }
-  @font-face {
+    src: url('ArmcapsU.ttf') format('truetype');
+}
+
+@font-face {
     font-family: 'Bokonique';
     src: url('Bokonique-Bold.otf') format('truetype');
-  }
-body{
+}
+
+body {
     background-color: #F9F1DE;
     font-family: 'Armcaps Unicode';
     font-style: normal;
@@ -20,11 +23,12 @@ body{
     line-height: 64px;
     color: #9C1F2A;
 }
-body h1{
+
+body h1 {
     font-family: 'Bokonique';
     font-style: normal;
     font-weight: 400;
-    font-size: clamp(16px , 48px , 500px);
+    font-size: 48px;
     line-height: 58px;
     color: #72031A;
     display: flex;
@@ -34,52 +38,134 @@ body h1{
     margin-top: 35px;
     margin-bottom: 50px;
 }
-.container{
+
+.container {
     display: flex;
+    justify-content: center;
 }
+
 .img1 {
+    left: 0;
     position: fixed;
 }
-.img2{
+
+.img2 {
     right: 0;
     position: fixed;
 }
-.mainPage{
+
+.mainPage {
     display: flex;
     flex-direction: column;
 }
-.boardOfLetters{
-    display: flex;
-    justify-content: center;
+
+.divForAllLetters {
+    display: grid;
+    grid-template-columns: repeat(9, minmax(0px, 1fr));
+    justify-items: center;
 }
-.divForAllLetters{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    width: 75%;
-}
+
 .divWithLetter {
     width: 140px;
     height: 140px;
     display: flex;
     justify-content: center;
     align-items: center;
-    transition:0.4s;
+    transition: 0.4s;
 }
 
-.divWithLetter:hover{
+.divWithLetter:hover {
     background-image: url(IMGS/patternn-04\ 2.svg);
     background-repeat: no-repeat;
     background-size: 100% 100%;
     transform: scale(1.2);
     cursor: pointer;
 }
-.emptyDiv{
-    width: 140px;
-    height: 140px;
-}
-@media screen and (max-width: 1872px) and (min-width: 1495px) {
-    body{
-        position: fixed;
+
+@media screen and (max-width: 1536px) and (min-width: 1200px) {
+    .divForAllLetters {
+        display: grid;
+        grid-template-columns: repeat(8, minmax(0px, 1fr));
     }
-  }
+}
+
+@media screen and (max-width: 1380px) and (min-width: 1100px) {
+    .divForAllLetters {
+        display: grid;
+        grid-template-columns: repeat(6, minmax(0px, 1fr));
+    }
+}
+
+@media screen and (max-width: 1100px) and (min-width: 900px) {
+    .divForAllLetters {
+        display: grid;
+        grid-template-columns: repeat(4, minmax(0px, 1fr));
+    }
+}
+
+@media screen and (max-width: 900px) and (min-width: 770px) {
+    body h1 {
+        font-size: 36px;
+    }
+
+    .divForAllLetters {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0px, 1fr));
+    }
+}
+
+@media screen and (min-width:620px) and (max-width: 770px) {
+    body h1 {
+        font-size: 24px;
+    }
+
+    .divForAllLetters {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0px, 1fr));
+    }
+}
+
+@media screen and (max-width: 620px) {
+    body h1 {
+        font-size: 24px;
+        width: 10px;
+        margin: 0 auto;
+    }
+
+    .divForAllLetters {
+        display: grid;
+        grid-template-columns: repeat(1, minmax(0px, 1fr));
+    }
+}
+
+@media screen and (max-width: 500px) {
+    body h1 {
+        font-size: 16px;
+        width: 10px;
+        margin: 0 auto;
+        margin-top: 20px;
+    }
+
+    .divForAllLetters {
+        display: grid;
+        grid-template-columns: repeat(1, minmax(0px, 1fr));
+    }
+
+    .myImg1,
+    .myImg2 {
+        width: 150px;
+    }
+}
+
+@media screen and (max-width: 390px) {
+    .divWithLetter {
+        width: 70px;
+        height: 70px;
+        margin-bottom: 20px;
+    }
+
+    .myImg1,
+    .myImg2 {
+        width: 140px;
+    }
+}
