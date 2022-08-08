@@ -105,7 +105,7 @@ img{
     }
 }
 
-@media screen and (max-width: 900px) and (min-width: 770px) {
+@media screen and (max-width: 900px) and (min-width: 620px) {
     body h1 {
         font-size: 36px;
     }
@@ -115,59 +115,20 @@ img{
         grid-template-columns: repeat(3, minmax(0px, 1fr));
     }
 }
-
-@media screen and (min-width:620px) and (max-width: 770px) {
+@media screen and (max-width: 620px) {
     body h1 {
         font-size: 24px;
+        margin: 0 auto;
+        width: 50%;
     }
-
     .divForAllLetters {
         display: grid;
         grid-template-columns: repeat(2, minmax(0px, 1fr));
     }
 }
-
-@media screen and (max-width: 620px) {
-    body h1 {
-        font-size: 24px;
-        width: 10px;
-        margin: 0 auto;
-    }
-
+@media screen and (max-width: 440px) {
     .divForAllLetters {
         display: grid;
         grid-template-columns: repeat(1, minmax(0px, 1fr));
-    }
-}
-
-@media screen and (max-width: 500px) {
-    body h1 {
-        font-size: 16px;
-        width: 10px;
-        margin: 0 auto;
-        margin-top: 20px;
-    }
-
-    .divForAllLetters {
-        display: grid;
-        grid-template-columns: repeat(1, minmax(0px, 1fr));
-    }
-
-    .myImg1,
-    .myImg2 {
-        width: 150px;
-    }
-}
-
-@media screen and (max-width: 390px) {
-    .divWithLetter {
-        width: 70px;
-        height: 70px;
-        margin-bottom: 20px;
-    }
-
-    .myImg1,
-    .myImg2 {
-        width: 140px;
     }
 }
