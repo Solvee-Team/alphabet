@@ -42,7 +42,7 @@
 .letterDiv:hover {
   background-image: url('patternn-04.svg');
   background-position: center;
-  cursor: default;
+  cursor: pointer;
   background-size: cover;
   font-size: 48px;
   transform: scale(1.5);
