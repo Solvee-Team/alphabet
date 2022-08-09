@@ -2,18 +2,23 @@ body{
     margin: 0;
     padding: 0;
 }
+::-webkit-scrollbar {
+    width: 0px;
+    background: transparent;
+}
+.images{
+    height: 100vh;
+    margin: 0;
+    padding:0;
+}
 #allLettersBox{
-    margin: 0 auto;
-    /* display: grid;
-    grid-template-columns: repeat(9, 1fr); */
-    /* justify-items:  center; */
-    display: flex;
-    flex-wrap: wrap; 
-    gap: 25px 26px;
+    display: grid;
+    grid-template-columns: repeat(9, 1fr);
+    gap: 14px;
+    height: 100vh;
 }
 #allLettersBox div{
     color: #9C1F2A;
-    /* margin: 20px 30px; */
     font-family: 'Armcaps Unicode';
     font-style: normal;
     font-size:60px;
@@ -22,28 +27,24 @@ body{
     text-align: center;
 }
 #main{
-    height: 100vh;
-    width: 100%;
     background-color:#F9F1DE;
     display: flex;
     justify-content: center;
-    
+    width: 100%;  
 }
 #text{
-    margin: 0 auto;
-    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
-
+    height: 100vh;
 }
 .headerTextStyle{
     font-family: "Bokonique";   
-    font-size: 48px;
+    font-size: 40px;
+    text-shadow: -3px 2px 2px #30171c;
     text-transform: uppercase;
     color: #72031A;
 }
-
 .allLetter:hover{
     width: 70px;
     height: 70px;
@@ -52,9 +53,52 @@ body{
     background-position:center ;
     background-size: 100%;
     background-repeat: no-repeat;
-
 }
-
-@media (min-width: 600px) {
-    .cards { grid-template-columns: repeat(2, 1fr); }
-  }
+@font-face {
+    font-family: "Armcaps Unicode";
+    src: url("font-styles/ArmcapsU.ttf") ;
+}
+@font-face {
+    font-family: "Bokonique"; 
+    src: url("font-styles/Bokonique-Light.otf");
+}
+@media screen and (min-width: 320px) and (max-width:480px) {
+    #allLettersBox { 
+        display: grid;
+        grid-template-columns: repeat(2, 1fr); 
+        overflow: scroll;
+    }
+    .headerTextStyle{
+        font-size: 30px;
+    }
+    
+}
+@media screen and (min-width: 481px)  and (max-width:768px){
+    #allLettersBox { 
+        display: grid;
+        grid-template-columns: repeat(3, 1fr); 
+        overflow: scroll;
+    }
+    .headerTextStyle{
+        font-size: 30px;
+    }
+    #allLettersBox div{
+        font-size: 40px;
+    }
+}
+@media screen and (min-width: 769px) and (max-width:1025px){
+    #allLettersBox { 
+        display: grid;
+        grid-template-columns: repeat(6, 1fr); 
+        overflow: scroll;
+       
+    }
+    #allLettersBox div{
+        font-size: 50px;
+        width: 60px;
+    }
+    .headerTextStyle{
+        font-size: 30px;
+    }
+   
+}

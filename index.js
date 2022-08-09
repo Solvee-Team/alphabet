@@ -11,7 +11,11 @@ window.onload = () => {
         let letterDivs = document.createElement("div");
         letterDivs.className = "allLetter";
         letterDivs.innerHTML = val;
-        // letterDivs.onclick()
+        letterDivs.onclick = function (){alertMoreInformation}
         allLetersParent.appendChild(letterDivs)
     })
+}
+
+function alertMoreInformation(){
+
 }
