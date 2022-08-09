@@ -47,6 +47,7 @@
   font-size: 48px;
   transform: scale(1.5);
   background-color: unset;
+  transition: 0.3s;
 }
 
 .sidePattern {
