@@ -78,8 +78,9 @@
 
 @media only screen and (max-width: 1150px) {
   #allLettersDiv {
+    height: auto;
     grid-template-columns: repeat(7, minmax(0px, 1fr));
-    padding: 0 60px;
+    padding: 10px 60px;
   }
   .letterDiv {
     margin: 10px 20px;
@@ -89,13 +90,13 @@
 @media only screen and (max-width: 1100px) {
   #allLettersDiv {
     grid-template-columns: repeat(6, minmax(0px, 1fr));
+    padding: 10px 80px;
   }
 }
 
 @media only screen and (max-width: 950px) {
   #allLettersDiv {
     grid-template-columns: repeat(5, minmax(0px, 1fr));
-    padding: 0 80px;
   }
   #titleDiv {
     width: 250px !important;
@@ -106,14 +107,14 @@
 @media only screen and (max-width: 820px) {
   #allLettersDiv {
     grid-template-columns: repeat(4, minmax(0px, 1fr));
-    padding: 0 100px;
+    padding: 10px 100px;
   }
 }
 
 @media only screen and (max-width: 750px) {
   #allLettersDiv {
     grid-template-columns: repeat(3, minmax(0px, 1fr));
-    padding: 0 110px;
+    padding: 10px 110px;
   }
   #titleDiv {
     font-size: 38px;
@@ -124,7 +125,7 @@
 @media only screen and (max-width: 650px) {
   #allLettersDiv {
     grid-template-columns: repeat(2, minmax(0px, 1fr));
-    padding: 0 130px;
+    padding: 10px 130px;
   }
 }
 
@@ -137,24 +138,30 @@
 
 @media only screen and (max-width: 575px) {
   #allLettersDiv {
-    grid-template-columns: repeat(1, minmax(0px, 1fr));
-    padding: 0 130px;
+    padding: 15px 110px 10px 110px;
   }
   #titleDiv {
-    font-size: 20px;
+    font-size: 26px;
     width: 150px !important;
     text-shadow: -1.8px 1px #947C5A;
   }
 }
 
-@media only screen and (max-width: 465px) {
+@media only screen and (max-width: 560px) {
   #allLettersDiv {
-    grid-template-columns: repeat(1, minmax(0px, 1fr));
+    grid-template-columns: repeat(3, minmax(0px, 1fr));
+    padding: 0 0 10px 0;
   }
   #titleDiv {
     font-size: 30px;
   }
   .sidePattern {
     display: none;
+  }
+}
+
+@media only screen and (max-width: 390px) {
+  #allLettersDiv {
+    grid-template-columns: repeat(2, minmax(0px, 1fr));
   }
 }
