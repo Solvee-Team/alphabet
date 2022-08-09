@@ -52,7 +52,7 @@
 
 .sidePattern {
   position: fixed;
-  height: 660px;
+  height: 100vh;
   background-color: unset;
 }
 
