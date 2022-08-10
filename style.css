@@ -99,7 +99,6 @@ img {
     justify-content: center;
     align-items: center;
 }
-
 .popupContent {
     background-color: #DBCEB6;
     color: #7A0821;
@@ -116,7 +115,7 @@ img {
     justify-content: center;
     align-items: center;
     border-right: 1px solid #7E6034;
-    font-size: 290px;
+    font-size: 270px;
 }
 
 .rightSide {
@@ -159,21 +158,21 @@ img {
     color:#947C5A;
     cursor:pointer;
 }
-@media screen and (min-width: 2380px){
+@media screen and (min-width: 2500px){
     body h1{
         font-size: 64px;
     }
     .divForAllLetters {
         display: grid;
-        grid-template-columns: repeat(12, minmax(0px, 1fr));
+        grid-template-columns: repeat(11, minmax(0px, 1fr));
     }
     .divWithLetter{
-        width: 150px;
-        height: 240px;
+        width: 190px;
+        height: 170px;
     }
 }
 
-@media screen and (max-width: 2380px){
+@media screen and (max-width: 2500px){
     body h1{
         font-size: 60px;
     }
@@ -182,25 +181,25 @@ img {
         grid-template-columns: repeat(10, minmax(0px, 1fr));
     }
     .divWithLetter{
-        width: 150px;
-        height: 230px;
+        width: 190px;
+        height: 170px;
     }
 }
-@media screen and (max-width: 2050px) {
+@media screen and (max-width: 2280px) {
     body h1{
         font-size: 56px;
     }
     .divWithLetter{
-        width: 130px;
+        width: 150px;
     }
 }
 
-@media screen and (max-width: 1865px) {
+@media screen and (max-width: 1890px) {
     body h1{
         font-size: 52px;
     }
     .divWithLetter{
-        width: 110px;
+        width: 120px;
     }
 }
 
@@ -212,50 +211,58 @@ img {
         grid-template-columns: repeat(9, minmax(0px, 1fr));
     }
     .divWithLetter {
-        width: 100px;
-        height: 100px;
+        height: 130px;
     }
 }
-@media screen and (max-width: 1247px) {
+@media screen and (max-width: 1536px) {
+    body h1{
+        font-size: 48px;
+    }
+    .divWithLetter {
+        width: 100px;
+    }
+}
+@media screen and (max-width: 1300px) {
     body h1{
         font-size: 44px;
     }
-    .divForAllLetters {
-        grid-template-columns: repeat(8, minmax(0px, 1fr));
+    .divWithLetter {
+        height: 110px;
     }
 }
-@media screen and (max-width: 1161px) {
+
+@media screen and (max-width: 1278px) {
     body h1 {
         font-size: 36px;
     }
 
     .divForAllLetters {
-        grid-template-columns: repeat(6, minmax(0px, 1fr));
+        grid-template-columns: repeat(7, minmax(0px, 1fr));
     }
 }
 
-@media screen and (max-width: 1060px) {
+@media screen and (max-width: 1100px) {
     body h1 {
         font-size: 32px;
     }
 
     .divForAllLetters {
-        grid-template-columns: repeat(5, minmax(0px, 1fr));
+        grid-template-columns: repeat(6, minmax(0px, 1fr));
     }
 
 }
 
-@media screen and (max-width: 960px) {
+@media screen and (max-width: 1042px) {
     body h1 {
         font-size: 30px;
     }
 
     .divForAllLetters {
-        grid-template-columns: repeat(4, minmax(0px, 1fr));
+        grid-template-columns: repeat(5, minmax(0px, 1fr));
     }
 }
 
-@media screen and (max-width: 860px) {
+@media screen and (max-width: 980px) {
     body h1 {
         font-size: 24px;
         margin: 0 auto;
@@ -264,11 +271,11 @@ img {
         margin-bottom: 30px;
     }
     .divForAllLetters {
-        grid-template-columns: repeat(3, minmax(0px, 1fr));
+        grid-template-columns: repeat(4, minmax(0px, 1fr));
     }
 }
 
-@media screen and (max-width: 770px) {
+@media screen and (max-width: 880px) {
     body h1 {
         line-height: 30px;
     }
@@ -278,10 +285,13 @@ img {
         width: 80px;
         height: 80px;
     }
+    .divForAllLetters {
+        grid-template-columns: repeat(3, minmax(0px, 1fr));
+    }
 
 }
 
-@media screen and (max-width: 740px) {
+@media screen and (max-width: 750px) {
     body h1 {
         font-size: 36px;
         line-height: 50px;
