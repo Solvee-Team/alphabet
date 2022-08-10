@@ -11,11 +11,12 @@ window.onload = () => {
         let letterDivs = document.createElement("div");
         letterDivs.className = "allLetter";
         letterDivs.innerHTML = val;
-        letterDivs.onclick = function (){alertMoreInformation}
+        letterDivs.onclick = function(){PopUp("show")}
         allLetersParent.appendChild(letterDivs)
     })
 }
 
-function alertMoreInformation(){
-
+function PopUp(hideOrshow) {
+    if (hideOrshow == 'hide') document.getElementById('ac-wrapper').style.display = "none";
+    else document.getElementById('ac-wrapper').removeAttribute('style');
 }
