@@ -10,21 +10,37 @@ body{
     height: 100vh;
     margin: 0;
     padding:0;
+    
 }
+.firstImage{
+    position: fixed;
+    left: 0;
+}
+.secondImage{
+    position: fixed;
+    right: 0;
+}
+
 #allLettersBox{
     display: grid;
     grid-template-columns: repeat(9, 1fr);
-    gap: 14px;
+    gap: 0 20px;
     height: 100vh;
+    padding: 0;
+    margin: 0;
 }
 #allLettersBox div{
     color: #9C1F2A;
     font-family: 'Armcaps Unicode';
     font-style: normal;
-    font-size:60px;
+    font-size:55px;
     padding: 5px 5px;
     width: 90px;
-    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+
 }
 #main{
     background-color:#F9F1DE;
@@ -41,18 +57,19 @@ body{
 .headerTextStyle{
     font-family: "Bokonique";   
     font-size: 40px;
-    text-shadow: -3px 2px 2px #30171c;
+    text-shadow: -2px 2px 2px #3a3939;
     text-transform: uppercase;
     color: #72031A;
+    margin-bottom: 60px;
 }
 .allLetter:hover{
-    width: 70px;
-    height: 70px;
     cursor: pointer;
     background-image: url("patternn-04 2.svg");
-    background-position:center ;
-    background-size: 100%;
+    background-position: top;
+    transform: scale(1.2);  
+    background-size: 100% 100%;
     background-repeat: no-repeat;
+    overflow: hidden;
 }
 @font-face {
     font-family: "Armcaps Unicode";
@@ -62,17 +79,23 @@ body{
     font-family: "Bokonique"; 
     src: url("font-styles/Bokonique-Light.otf");
 }
-@media screen and (min-width: 320px) and (max-width:480px) {
+
+@media screen and (min-width: 0px)  and (max-width:630px){
+    .images{
+        display: none;
+    }
+}
+@media screen and (min-width: 0px) and (max-width:480px) {
     #allLettersBox { 
         display: grid;
         grid-template-columns: repeat(2, 1fr); 
         overflow: scroll;
     }
     .headerTextStyle{
-        font-size: 30px;
+        font-size: 25px;
     }
-    
 }
+
 @media screen and (min-width: 481px)  and (max-width:768px){
     #allLettersBox { 
         display: grid;
@@ -82,23 +105,50 @@ body{
     .headerTextStyle{
         font-size: 30px;
     }
-    #allLettersBox div{
-        font-size: 40px;
+}
+
+@media screen and (min-width: 768px) and (max-width:861px){
+    #allLettersBox { 
+        display: grid;
+        grid-template-columns: repeat(4, 1fr); 
+        overflow: scroll; 
+    }
+    .headerTextStyle{
+        font-size: 30px;
     }
 }
-@media screen and (min-width: 769px) and (max-width:1025px){
+@media screen and (min-width: 861px) and (max-width:1019px){
+    #allLettersBox { 
+        display: grid;
+        grid-template-columns: repeat(5, 1fr); 
+        overflow: scroll;
+    }
+    .headerTextStyle{
+        font-size: 40px;
+    } 
+}
+@media screen and (min-width: 1020px) and (max-width:1120px){
     #allLettersBox { 
         display: grid;
         grid-template-columns: repeat(6, 1fr); 
         overflow: scroll;
-       
     }
-    #allLettersBox div{
-        font-size: 50px;
-        width: 60px;
-    }
+    
     .headerTextStyle{
-        font-size: 30px;
+        font-size: 40px;
+    }
+   
+}
+
+@media screen and (min-width: 1110px) and (max-width:1225px){
+    #allLettersBox { 
+        display: grid;
+        grid-template-columns: repeat(7, 1fr); 
+        overflow: scroll;
+    }
+    
+    .headerTextStyle{
+        font-size: 40px;
     }
    
 }
