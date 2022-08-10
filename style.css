@@ -88,7 +88,78 @@ img {
     transform: scale(1.2);
     cursor: pointer;
 }
-@media screen and (min-width: 2300px){
+.popup {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(0, 0, 0, 0.9);
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.popupContent {
+    background-color: #DBCEB6;
+    color: #7A0821;
+    width: 500px;
+    height: 500px;
+    border-radius: 100px;
+    display: flex;
+    overflow: hidden;
+}
+
+.leftSide {
+    width: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-right: 1px solid #7E6034;
+    font-size: 290px;
+}
+
+.rightSide {
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    font-size: 24px;
+}
+.grapar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid #7E6034;
+    border-right: 0;
+    border-left: 0;
+    width: 100%;
+}
+.textTop{
+    font-size: 36px;
+ }
+
+.word,
+.voice {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    width: 60%;
+    height: 10%;
+    border-radius: 30px;
+    background-color: #947C5A;
+}
+
+.xForClose{
+    position: absolute;
+    top:70px;
+    right: 70px;
+    color:#947C5A;
+    cursor:pointer;
+}
+@media screen and (min-width: 2380px){
     body h1{
         font-size: 64px;
     }
@@ -98,11 +169,11 @@ img {
     }
     .divWithLetter{
         width: 150px;
-        height: 180px;
+        height: 240px;
     }
 }
 
-@media screen and (max-width: 2300px){
+@media screen and (max-width: 2380px){
     body h1{
         font-size: 60px;
     }
@@ -112,30 +183,28 @@ img {
     }
     .divWithLetter{
         width: 150px;
-        height: 180px;
+        height: 230px;
     }
 }
-@media screen and (max-width: 1926px) {
+@media screen and (max-width: 2050px) {
     body h1{
         font-size: 56px;
     }
     .divWithLetter{
         width: 130px;
-        height: 170px;
     }
 }
 
-@media screen and (max-width: 1754px) {
+@media screen and (max-width: 1865px) {
     body h1{
         font-size: 52px;
     }
     .divWithLetter{
         width: 110px;
-       
     }
 }
 
-@media screen and (max-width: 1480px) {
+@media screen and (max-width: 1670px) {
     body h1{
         font-size: 48px;
     }
