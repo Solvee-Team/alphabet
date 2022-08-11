@@ -9,15 +9,11 @@
             divForLetters.className = ('divWithLetter');
             let text = document.createTextNode(arrOfLetters[i]);
             divForLetters.appendChild(text);
-            document.querySelector(".divForAllLetters").appendChild(divForLetters);
-        
+            document.querySelector(".divForAllLetters").appendChild(divForLetters);       
     }
-    let arrOfWords = ["արև" , "բալ" , "գնդակ" , "դդում" , "ելակ" , "զատիկ" , "էշ" , "ընկույզ" , "թութակ" , "ժամացույց" , "իլիկ" , "լուսին" , "խաղող" , "ծիածան" , "կացին" , "հաղարջ" , "ձուկ" , "ղեկ" , "ճնճղուկ" , "մոմ" , "յասաման" , "նապաստակ" , "շուն" , "ոզնի" , "չամիչ" , "պայուսակ" , "ջայլամ" , "ռազմիկ" , "սկյուռ" , "վարդ" , "տանձ" , "րոպե" , "ցուլ" , "ուղտ" , "փիղ" , "քաղաք" , "Երևան" , "օձ" , "ֆլամինգո" , ];
-
-
-    let arrOfGrapar = [ ["այբ" , "“Ayb”"] , ["բեն" , "“Ben”"] , ["գիմ" , "“gim”"] , ["դա" , "“da”"] , ["եչ" , "“yech”"] , ["զա" , "“Žhe”"] ,  ["է" , "“Ini”"] , ["ըթ" , "“Ut`”"] , ["թո" , "“T`o”"] , ["ժէ" , "“Žhe”"] , ["ինի" , "“Ini”"] , ["լիւն" , "“Lyun”"] , ["խէ" , "“Xeh”"] , ["ծա" , "“Tza”"] , ["կեն" , "“Ken”"] , ["հո" , "“Ho”"] , ["ձա" , "“dza”"] , ["ղատ" , "“glat”"] , ["ճէ" , "“Cheh”"] , ["մեն" , "“Men”"] , ["յի" , "“Yi”"] , ["նու" , "“Nu”"] , ["շա" , "“Sha”"] , ["ո" , "“vo”"] , ["չա" , "“cha”"] , ["պէ" , "“Peh”"] , ["Ջէ" , "“Jeh”"] , ["ռա" , "“Rra”"] , ["սէ" , "“Seh”"] , ["վէւ" , "“Vew”"] ,  ["տիւն" , "“Tiun”"] , ["րէ" , "“Reh”"] , ["ցո" , "“Co”"] , ["ւիւն" , "“Wyun”"] , ["փիւր" , "“P`iur”"]  ,  ["փիւր" , "“P`iur”"] , ["քէ" , "“Qeh”"] ] ;
-    let objForLetterInfo = Object.fromEntries(arrOfLetters.map((letter) => [letter , ""] ));
-   // console.log(objForLetterInfo)
+    let arrOfWords = [ ["արև" , "այբ" , "“Ayb”"] , ["բալ" , "բեն" , "“Ben”"] , ["գնդակ" , "գիմ" , "“gim”"] , ["դդում" , "դա" , "“da”"] , ["ելակ" ,"եչ" , "“yech”"] , ["զատիկ" , "զա" , "“Žhe”"] ,  ["էշ" ,"է" , "“Ini”"] , ["ընկույզ" , "ըթ" , "“Ut`”"] , ["թութակ" , "թո" , "“T`o”"] , ["ժամացույց" , "ժէ" , "“Žhe”"] , ["իլիկ" ,"ինի" , "“Ini”"] , ["լուսին" ,"լիւն" , "“Lyun”"] , ["խաղող" , "խէ" , "“Xeh”"] , [ "ծիածան"  , "ծա" , "“Tza”"] , ["կացին" ,"կեն" , "“Ken”"] , ["հաղարջ" ,"հո" , "“Ho”"] , ["ձուկ" , "ձա" , "“dza”"] , ["ղեկ" , "ղատ" , "“glat”"] , ["ճնճղուկ" , "ճէ" , "“Cheh”"] , ["մեն" , "“Men”"] , ["յասաման" , "յի" , "“Yi”"] , ["նապաստակ" , "նու" , "“Nu”"] , ["շուն" , "շա" , "“Sha”"] , ["ոզնի" , "ո" , "“vo”"] , ["չամիչ" , "չա" , "“cha”"] , ["պայուսակ" , "պէ" , "“Peh”"] , ["ջայլամ" , "Ջէ" , "“Jeh”"] , ["ռազմիկ" , "ռա" , "“Rra”"] , ["սկյուռ" , "սէ" , "“Seh”"] , ["վարդ" , "վէւ" , "“Vew”"] ,  ["տանձ" , "տիւն" , "“Tiun”"] , ["րոպե" ,"րէ" , "“Reh”"] , ["ցուլ" , "ցո" , "“Co”"] , ["ուղտ" ,"ւիւն" , "“Wyun”"] , ["փիղ" ,"փիւր" , "“P`iur”"]  , ["քաղաք" , "քէ" , "“Qeh”"] , ["Երևան"] , [ "օձ"] , ["ֆլամինգո"] ] ;
+     let objForLetterInfo = Object.fromEntries(arrOfLetters.map((letter , index) => [letter , arrOfWords[index]] ));
+     console.log(objForLetterInfo)
      document.querySelectorAll('.divWithLetter').forEach(element => element.addEventListener('click' ,function getIndex(){
         let letterInfo = document.createTextNode(element.innerHTML);
         let leftSide = document.querySelector('.leftSide');
