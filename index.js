@@ -53,7 +53,7 @@ function lineWrapper() {
   }
     let arrOfObj = [
     { id: 0, letter: "Ա", word: "արև", grapar: "այբ", graparEng: "“Ayb”" },
-    { id: 1, letter: "Բ", word: "բալ", grapar: "բեն", graparEng: "“Ben”" },
+    { id: 1, letter: "Բ", word: "բալ", grapar: "բեն", graparEng: "“Ben”" , voice: "SNDS/B.mp3"},
     { id: 2, letter: "Գ", word: "գնդակ", grapar: "գիմ", graparEng: "“gim”" },
     { id: 3, letter: "Դ", word: "դդում", grapar: "դա", graparEng: "“da”" },
     { id: 4, letter: "Ե", word: "ելակ", grapar: "եչ", graparEng: "“yech”" },
@@ -103,6 +103,12 @@ function lineWrapper() {
         if (index === obj.id) {
             console.log(obj.word);
             document.querySelector(".word").innerHTML = obj.word;
+            let x = document.querySelector('.h')
+            x.src = obj.voice;
+            document.querySelector('input').addEventListener('click' , function foo(){
+                let x = document.querySelector('.h');
+                x.play()
+            })
         }
       });
       document.querySelector(".popup").style.opacity = "1";

@@ -107,6 +107,9 @@ img {
     border-radius: 100px;
     display: flex;
     overflow: hidden;
+    background: url(IMGS/Group\ 15.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .leftSide {
