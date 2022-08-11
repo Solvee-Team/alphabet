@@ -102,14 +102,13 @@ img {
 .popupContent {
     background-color: #DBCEB6;
     color: #7A0821;
-    width: 500px;
-    height: 500px;
+    width: 520px;
+    height: 485px;
     border-radius: 100px;
     display: flex;
-    overflow: hidden;
-    background: url(IMGS/Group\ 15.svg);
+    background: url(IMGS/Group\ 17.svg);
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size:cover;
 }
 
 .leftSide {
@@ -144,17 +143,23 @@ img {
  }
 
 .word,
-.voice {
+.divForVoice {
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: center;
     color: white;
     width: 60%;
     height: 10%;
     border-radius: 30px;
     background-color: #947C5A;
-}
+    display: flex;
 
+}
+.voiceIcon{
+    width: 22px;
+    height: 20px;
+    cursor: pointer;
+}
 .xForClose{
     position: absolute;
     top:70px;
@@ -173,6 +178,19 @@ img {
     .divWithLetter{
         width: 190px;
         height: 170px;
+    }
+    .popupContent{
+        width: 720px;
+        height: 685px;
+    }
+    .leftSide{
+        font-size: 370px;
+    }
+    .rightSide{
+        font-size: 50px;
+    }
+    .textTop{
+        font-size: 72px;
     }
 }
 
@@ -215,7 +233,7 @@ img {
         grid-template-columns: repeat(9, minmax(0px, 1fr));
     }
     .divWithLetter {
-        height: 130px;
+        height: 120px;
     }
 }
 @media screen and (max-width: 1536px) {
