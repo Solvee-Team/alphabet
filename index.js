@@ -1,7 +1,6 @@
 lineWrapper();
 function lineWrapper() {
   let popup = document.querySelector(".popup");
-  showHidePopup()
   let data = [
     { id: 0, letter: "Ա", word: "արև", grapar: "այբ", graparEng: "“Ayb”" , voice: "SNDS/A.mp3" , letterOfVoice: "[a]"},
     { id: 1,letter: "Բ",word: "բալ",grapar: "բեն",graparEng: "“Ben”", voice: "SNDS/B.mp3" , letterOfVoice: "[b]"},
@@ -44,12 +43,10 @@ function lineWrapper() {
     { id: 38, letter: "Ֆ", word: "ֆլամինգո" , voice: "SNDS/F.mp3" , letterOfVoice: "[f]"},
   ];
 
-  for (let i = 0; i < data
-.length; i++) {
+  for (let i = 0; i < data.length; i++) {
     let divForLetters = document.createElement("div");
     divForLetters.className = "divWithLetter";
-    let text = document.createTextNode(data
-  [i].letter);
+    let text = document.createTextNode(data[i].letter);
     divForLetters.appendChild(text);
     document.querySelector(".divForAllLetters").appendChild(divForLetters);
   }
@@ -60,14 +57,22 @@ function lineWrapper() {
       popup.style.visibility = "1";
       popup.style.zIndex = "1";
       document.querySelector('.leftSide').innerHTML = "";
-      data
-  .map((obj) => {
+      data.map((obj) => {
         if (index === obj.id) {
           document.querySelector('.leftSide').innerHTML = obj.letter;
-          document.querySelector(".word").innerHTML = obj.word;
-          let letterOfVoice = document.createTextNode(obj.letterOfVoice);  
+          let word = document.querySelector('.word')
+          if(window.innerWidth !== undefined ) { 
+            word.innerHTML = obj.word;
+            let w = window.innerWidth;
+            if(w > 881 && word.innerHTML.length > 5){
+              word.style.fontSize = "16px";
+            }
+            if(w < 881 && word.innerHTML.length > 5){      
+                  word.style.fontSize = "10px";
+          }
+        }
           let divForVoiceLetter = document.querySelector('.divForVoiceLetter');
-          divForVoiceLetter.appendChild(letterOfVoice);
+          divForVoiceLetter.innerHTML = obj.letterOfVoice
           if( obj.grapar !== undefined && obj.graparEng !== undefined){
           document.querySelector(".textTop").innerHTML = obj.grapar;
           document.querySelector(".textBottom").innerHTML = obj.graparEng;
@@ -91,11 +96,21 @@ function lineWrapper() {
     })
   );
   function showHidePopup(){
+    popup.style.zIndex = "-1";
     popup.style.opacity = "0";
     popup.style.visibility = "0";
-    popup.style.zIndex = "-1";
-    document.querySelector(".divForVoiceLetter").innerHTML = "";
   }
 
-  document.querySelector(".xForClose").addEventListener("click", showHidePopup );
+   document.querySelector(".xForClose").addEventListener("click", showHidePopup );
+  // function viewPort(){
+  //   if(window.innerWidth !== undefined ) { 
+  //     let w = window.innerWidth;
+  //     if(w < 881){
+  //       if(document.querySelector('.word').innerHTML.length > 5){
+  //           document.querySelector(".word").style.fontSize = "10px";
+  //       }
+  //     }
+  //   } 
+  // }
+  // viewPort();
 }
