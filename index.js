@@ -2,7 +2,7 @@ lineWrapper();
 function lineWrapper() {
   let popup = document.querySelector(".popup");
   showHidePopup()
-  let arrOfObj = [
+  let data = [
     { id: 0, letter: "Ա", word: "արև", grapar: "այբ", graparEng: "“Ayb”" , voice: "SNDS/A.mp3" , letterOfVoice: "[a]"},
     { id: 1,letter: "Բ",word: "բալ",grapar: "բեն",graparEng: "“Ben”", voice: "SNDS/B.mp3" , letterOfVoice: "[b]"},
     { id: 2, letter: "Գ", word: "գնդակ", grapar: "գիմ", graparEng: "“gim”", voice: "SNDS/G.mp3" , letterOfVoice: "[g]" },
@@ -44,10 +44,12 @@ function lineWrapper() {
     { id: 38, letter: "Ֆ", word: "ֆլամինգո" , voice: "SNDS/F.mp3" , letterOfVoice: "[f]"},
   ];
 
-  for (let i = 0; i < arrOfObj.length; i++) {
+  for (let i = 0; i < data
+.length; i++) {
     let divForLetters = document.createElement("div");
     divForLetters.className = "divWithLetter";
-    let text = document.createTextNode(arrOfObj[i].letter);
+    let text = document.createTextNode(data
+  [i].letter);
     divForLetters.appendChild(text);
     document.querySelector(".divForAllLetters").appendChild(divForLetters);
   }
@@ -58,7 +60,8 @@ function lineWrapper() {
       popup.style.visibility = "1";
       popup.style.zIndex = "1";
       document.querySelector('.leftSide').innerHTML = "";
-      arrOfObj.map((obj) => {
+      data
+  .map((obj) => {
         if (index === obj.id) {
           document.querySelector('.leftSide').innerHTML = obj.letter;
           document.querySelector(".word").innerHTML = obj.word;
