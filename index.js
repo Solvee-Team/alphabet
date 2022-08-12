@@ -75,7 +75,13 @@ function lineWrapper() {
           document.querySelector(".voiceIcon").addEventListener("click", function () {
             let sound = document.querySelector(".sound");
             sound.src = obj.voice;
-            sound.play();
+            playPromise = sound.play()
+            if (playPromise !== undefined) {
+              playPromise.then(_ => {
+              })
+              .catch(error => {
+              });
+              }
             });
         }
       });
