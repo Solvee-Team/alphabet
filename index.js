@@ -1,6 +1,7 @@
 lineWrapper();
+
 function lineWrapper() {
-  let popup = document.querySelector(".popup");
+
   let data = [
     { id: 0, letter: "Ա", word: "արև", grapar: "այբ", graparEng: "“Ayb”" , voice: "SNDS/A.mp3" , letterOfVoice: "[a]"},
     { id: 1,letter: "Բ",word: "բալ",grapar: "բեն",graparEng: "“Ben”", voice: "SNDS/B.mp3" , letterOfVoice: "[b]"},
@@ -51,26 +52,42 @@ function lineWrapper() {
     document.querySelector(".divForAllLetters").appendChild(divForLetters);
   }
 
+  let popup = document.querySelector(".popup");
+
   document.querySelectorAll(".divWithLetter").forEach((element, index) =>
     element.addEventListener("click", function() {
+
       popup.style.opacity = "1";
       popup.style.visibility = "1";
       popup.style.zIndex = "1";
-      document.querySelector('.leftSide').innerHTML = "";
+
       data.map((obj) => {
         if (index === obj.id) {
           document.querySelector('.leftSide').innerHTML = obj.letter;
-          let word = document.querySelector('.word')
-          if(window.innerWidth !== undefined ) { 
-            word.innerHTML = obj.word;
-            let w = window.innerWidth;
+          let word = document.querySelector('.word');
+          word.innerHTML = obj.word;
+          if(obj.id === 36){
+            word.innerHTML = word.innerHTML.replace('և', '<span style="color: #7A0821;">և</span>');
+            word.classList.add("justifyCenter");
+          }
+
+          let w = window.innerWidth;
+          if(w !== undefined ) { 
             if(w > 881 && word.innerHTML.length > 5){
               word.style.fontSize = "16px";
+            } else if(w > 881 && word.innerHTML.length < 5){
+              word.style.fontSize = "24px";
+            } else if(w < 881 && w > 572 && word.innerHTML.length > 4){      
+              word.style.fontSize = "12px";
+            } else if(w < 881 && w > 572 && word.innerHTML.length < 4){      
+              word.style.fontSize = "20px";
+            } else if(w < 571 && word.innerHTML.length > 4){
+              word.style.fontSize = "8px";
+            } else if(w < 571 && word.innerHTML.length < 4){
+              word.style.fontSize = "16px";
             }
-            if(w < 881 && word.innerHTML.length > 5){      
-                  word.style.fontSize = "10px";
-          }
         }
+
           let divForVoiceLetter = document.querySelector('.divForVoiceLetter');
           divForVoiceLetter.innerHTML = obj.letterOfVoice
           if( obj.grapar !== undefined && obj.graparEng !== undefined){
@@ -80,6 +97,7 @@ function lineWrapper() {
             document.querySelector(".textTop").innerHTML = "";
             document.querySelector(".textBottom").innerHTML = "";
           }
+
           document.querySelector(".voiceIcon").addEventListener("click", function () {
             let sound = document.querySelector(".sound");
             sound.src = obj.voice;
@@ -91,26 +109,33 @@ function lineWrapper() {
               });
               }
             });
+
         }
+
       });
+
     })
+
   );
+
   function showHidePopup(){
+
     popup.style.zIndex = "-1";
     popup.style.opacity = "0";
     popup.style.visibility = "0";
+
   }
 
    document.querySelector(".xForClose").addEventListener("click", showHidePopup );
-  // function viewPort(){
-  //   if(window.innerWidth !== undefined ) { 
-  //     let w = window.innerWidth;
-  //     if(w < 881){
-  //       if(document.querySelector('.word').innerHTML.length > 5){
-  //           document.querySelector(".word").style.fontSize = "10px";
-  //       }
-  //     }
-  //   } 
-  // }
-  // viewPort();
+
+   popup.addEventListener("click",function outsideClick(event) {
+      if (
+        event.target.matches(".xForClose") ||
+        !event.target.closest(".popupBody")
+      ) {
+        showHidePopup()
+      }
+    },
+    false
+  )
 }

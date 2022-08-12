@@ -38,7 +38,7 @@ body h1 {
     margin-top: 35px;
     margin-bottom: 50px;
     position: relative;
-    text-shadow: -3px 2px 0px #30171c;
+    text-shadow: -3px 1px 0px #30171c;
 }
 
 .container {
@@ -88,6 +88,7 @@ img {
     transform: scale(1.2);
     cursor: pointer;
 }
+
 .popup {
     position: fixed;
     background-color: rgb(0, 0, 0, 0.9);
@@ -103,16 +104,18 @@ img {
     visibility: 0;
     opacity: 0;
 }
-.popupBody{
-    background:url(IMGS/Group\ 15.svg);
+
+.popupBody {
+    background: url(IMGS/Group\ 15.svg);
     background-repeat: no-repeat;
-    background-size:cover;
+    background-size: cover;
     width: 600px;
     height: 555px;
     display: flex;
     justify-content: center;
     align-items: center;
 }
+
 .popupContent {
     background-color: #DBCEB6;
     color: #7A0821;
@@ -142,18 +145,21 @@ img {
     font-size: 24px;
     font-family: 'Bokonique';
 }
+
 .grapar {
     display: flex;
     flex-direction: column;
     align-items: center;
-    border: 1px solid #7E6034;
     border-right: 0;
     border-left: 0;
     width: 100%;
+    border-bottom: 1px solid #7E6034;
+    border-top: 1px solid #7E6034;
 }
-.textTop{
+
+.textTop {
     font-size: 36px;
- }
+}
 
 .word,
 .divForVoice {
@@ -166,60 +172,81 @@ img {
     border-radius: 30px;
     background-color: #947C5A;
 }
-.divForVoiceIcon , .divForVoiceIcon{
+
+.divForVoiceIcon,
+.divForVoiceLetter {
     display: flex;
     justify-content: center;
     align-items: center;
 }
-.voiceIcon{
+
+.divForVoiceLetter {
+    font-family: 'Inter';
+}
+
+.voiceIcon {
     width: 22px;
     height: 20px;
     cursor: pointer;
 }
-.xForClose{
+
+.xForClose {
     position: absolute;
-    top:70px;
+    top: 70px;
     right: 70px;
-    color:#947C5A;
-    cursor:pointer;
+    color: #947C5A;
+    cursor: pointer;
     transition: 0.4s;
 }
+
+.justifyCenter {
+    justify-content: center;
+}
+
 @media screen and (max-width: 1920px) {
-    body h1{
+    body h1 {
         font-size: 52px;
     }
+
     .divForAllLetters {
         grid-template-columns: repeat(11, minmax(0px, 1fr));
     }
-    .divWithLetter{
+
+    .divWithLetter {
         width: 120px;
         height: 160px;
     }
 }
 
 @media screen and (max-width: 1710px) {
-    body h1{
+    body h1 {
         font-size: 48px;
     }
+
     .divForAllLetters {
         grid-template-columns: repeat(9, minmax(0px, 1fr));
     }
+
     .divWithLetter {
         height: 120px;
     }
 }
+
 @media screen and (max-width: 1536px) {
-    body h1{
+    body h1 {
         font-size: 48px;
     }
+
     .divWithLetter {
         width: 100px;
     }
 }
+
 @media screen and (max-width: 1330px) {
-    body h1{
+    body h1 {
         font-size: 44px;
     }
+
     .divWithLetter {
         height: 108px;
     }
@@ -264,6 +291,7 @@ img {
         line-height: 50px;
         margin-bottom: 30px;
     }
+
     .divForAllLetters {
         grid-template-columns: repeat(4, minmax(0px, 1fr));
     }
@@ -279,35 +307,42 @@ img {
         width: 80px;
         height: 80px;
     }
+
     .divForAllLetters {
         grid-template-columns: repeat(3, minmax(0px, 1fr));
     }
-    .popupBody{
-        width:410px;
-        height: 380px;       
+
+    .popupBody {
+        width: 410px;
+        height: 380px;
     }
-    .popupContent{
+
+    .popupContent {
         width: 350px;
         height: 330px;
-        border-radius: 70px;    
+        border-radius: 70px;
     }
-    .leftSide{
+
+    .leftSide {
         font-size: 170px;
     }
-    .rightSide{
-        font-size: 20px;
-    }
-    .rightSide img{
+
+    .rightSide img {
         width: 16px;
         height: 16px;
     }
-    .divForVoiceLetter{
+
+    .divForVoiceLetter {
         font-size: 16px;
     }
-    .textTop{
-        height: 30px;
-        margin-bottom: 10px;
-        font-size: 30px;
+
+    .textTop {
+        font-size: 20px;
+        line-height: 30px;
+    }
+
+    .textBottom {
+        font-size: 24px;
     }
 
 }
@@ -334,44 +369,61 @@ img {
     }
 
 }
+
 @media screen and (max-width: 570px) {
     .divForAllLetters {
         grid-template-columns: repeat(3, minmax(0px, 1fr));
     }
-    .popupBody{
-        width:300px;
-        height: 290px;   
+
+    .popupBody {
+        width: 300px;
+        height: 290px;
     }
-    .popupContent{
+
+    .popupContent {
         width: 265px;
         height: 245px;
         border-radius: 50px;
         margin-left: 7px;
         margin-bottom: 7px;
     }
-    .leftSide{
+
+    .leftSide {
         font-size: 130px;
     }
-    .rightSide{
-        font-size: 18px;
-    }
-    .rightSide img{
+
+    .rightSide img {
         width: 12px;
         height: 12px;
     }
-    .divForVoiceLetter{
+
+    .divForVoiceLetter {
         font-size: 12px;
     }
-    .textTop{
-        height: 10px;
-        font-size: 24px;
-        margin-bottom: 15px;
+
+    .textTop {
+        font-size: 16px;
+        line-height: 25px;
+    }
+
+    .textBottom {
+        font-size: 18px;
+    }
+
+    .xForClose {
+        font-size: 40px;
+        top: 100px;
+        right: 100px;
     }
 }
 
 @media screen and (max-width: 476px) {
     .divForAllLetters {
         grid-template-columns: repeat(2, minmax(0px, 1fr));
+    }
+
+    .xForClose {
+        right: 45%;
     }
 }
 
