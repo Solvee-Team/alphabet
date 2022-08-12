@@ -10,7 +10,7 @@
 </head>
 <body>
     <div id="main">
-        <img src="left picture.svg" alt="" class="images firstImage">
+        <img src="images/left picture.svg" alt="" class="images firstImage">
         <div id="text">
             <h1 class="headerTextStyle">ՀԱՅԵՐԵՆԻ ԱՅԲՈՒԲԵՆ</h1>
             <div id="allLettersBox">
@@ -18,7 +18,7 @@
 
             
         </div>
-        <img src="rigth picture.svg" alt="" class="images secondImage">
+        <img src="images/rigth picture.svg" alt="" class="images secondImage">
     </div>
 
 
@@ -26,7 +26,43 @@
     <div class="col-lg-12">
         <div id="ac-wrapper" style='display:none'>
           <div id="popup">
-                <input type="submit" name="submit" value="Close" onClick="PopUp('hide')" id="closeButton">
+                <input type="button" name="submit" value=" ✕" id="closeButton">
+                <div id="boxForGeneralLetter">
+
+                </div>
+                <div id="parentForInformation">
+                    <div id="word" class="elementsOfInformation">
+                        <div id="littleElement">
+
+                        </div>
+                    </div>
+                    <div id="letterInTheOtherAlphabet" class="elementsOfInformation">
+                        <div id="otherAlphabet">
+
+                        </div>
+                        <div id="inEnglish">
+
+                        </div>
+                    </div>
+                    <div id="voice" class="elementsOfInformation">
+                        <div id="colorDiv">
+                            <div id="forVoice">
+                                <button>
+                                    <img src="images/voice.svg" alt="" usemap="#my_image">
+                                    <audio id="myAudio">
+                                        <source src="SNDS/B.mp3" type="audio/mpeg">
+                                        Your browser does not support the audio element.
+                                    </audio>
+                                </button>   
+                            </div>
+                            <div id="transcription">
+
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
           </div>
         </div>
     </div>
