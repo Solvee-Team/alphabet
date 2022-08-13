@@ -59,10 +59,10 @@
 .headerTextStyle{
     font-family: "Bokonique";   
     font-size: 40px;
-    text-shadow: -2px 2px 2px #3a3939;
+    text-shadow: -3px 1px 0 #30171C;
     text-transform: uppercase;
     color: #72031A;
-    margin-bottom: 60px;
+    margin: 30px 0 50px ; 
 }
 .allLetter:hover{
     cursor: pointer;
@@ -79,19 +79,23 @@
     position: fixed;
     top: 0;
     left: 0;
-    width: 100%;
-    height: 100%;
+    right: 0;
+    bottom: 0;
     background: rgba(0, 0, 0, 0.9);
     z-index: 1001;
     display: flex;
     justify-content: center;
     align-items: center;
-    background-image: url(images/frame\ for\ information\ .svg);
-    background-repeat: no-repeat;
-    background-size:460px;
-    background-position: center +20px;
-    background-position-y: 100px;
 
+}
+.imageParent{
+    background-image: url("images/frame\ for\ information\ .svg");
+    background-size:cover;
+    width: 472px;
+    height: 435px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 #closeButton{
     position: fixed;
@@ -102,17 +106,17 @@
 	border: none;
 	padding: 20px;
 	cursor: pointer;
-    font-size: 30px;
+    font-size: 25px;
     font-weight:bold;
 }
 #popup {
-    width: 400px;
-    max-width: 400px;
-    height: 375px;
+    width: 414px;
+    max-width: 420px;
+    height: 384px;
     background: #DBCEB6;
     border-radius: 100px;
-    position:absolute;
     display: flex;
+    
     
 }
 #boxForGeneralLetter{
@@ -134,6 +138,11 @@
     justify-content: center;
     color: rgba(255, 255, 255, 1);
     font-family: "Bokonique";
+    width: 130px;
+    height: 43px;
+    border-radius:50px;
+    background-color:rgba(148, 124, 90, 1);
+    margin: 10px 0 0 0 ;
 
 }
 #parentForInformation{
@@ -144,6 +153,10 @@
     border: none;
     background: transparent;
     cursor: pointer;
+}
+#forVoice{
+    display: flex;
+    align-items: center;
 }
 .styleNone{
     display: none  !important;
@@ -180,14 +193,14 @@
     font-weight: bold;
     margin: 6px 0;
 }
-#littleElement{
-    width: 130px;
-    height: 43px;
-    border-radius:50px;
-    background-color:rgba(148, 124, 90, 1);
-    margin: 10px 0 0 0 ;
-    
+
+/* .littleSize{
+    font-size: 10px !important;
+    width: 80% !important;
 }
+.littleDiv{
+    font-size: 15px !important;
+} */
 #transcription{
     color:rgba(255, 255, 255, 1);
     font-family: "Inter";
@@ -212,12 +225,50 @@
     src: url("font-styles/Bokonique-Light.otf");
 }
 
-@media (min-width:555px){
+@media (min-width:400px){
     #popup{
         left:calc(50% -277px); 
     }
 }
-
+@media screen and (min-width: 0px)  and (max-width:550px){
+    #popup{
+        width: 260px!important;
+        height: 250px!important;
+        border-radius: 70px !important;
+    }
+    .imageParent{
+        width: 307px;
+        height: 286px;  
+    }
+    #letterInTheOtherAlphabet{
+        font-size: 12px;
+    }
+    #littleElement{
+        font-size: 10px !important;
+        width: 80% !important;
+        height: 40%;
+    }
+    #colorDiv{
+        width: 80% !important;
+        height: 35%;
+    }
+    #boxForGeneralLetter{
+        font-size: 120px;
+    }
+    #transcription{
+        font-size: 15px;
+    }
+    .voiceImage{
+        height: 20px;
+        width: 15px;
+    }
+    #forVoice button{
+        height: 20px;
+    }
+    #closeButton{
+        display: none;
+    }
+}
 @media screen and (min-width: 0px)  and (max-width:630px){
     .images{
         display: none;
@@ -231,7 +282,7 @@
         overflow: scroll;
     }
     .headerTextStyle{
-        font-size: 25px;
+        font-size: 23px;
     }
 }
 

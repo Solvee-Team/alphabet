@@ -1,3 +1,7 @@
+function closePopUp(){
+    document.getElementById('ac-wrapper').style.display = "none";
+}
+
 window.onload = () => {
     let allLetersParent = document.getElementById("allLettersBox");
     aboutAllLetters.map( (val,index) => {
@@ -10,22 +14,12 @@ window.onload = () => {
     let allDiv = document.querySelectorAll(".allLetter");
     allDiv.forEach((value,index) => {
         value.addEventListener("click", function(){
-            let close = true;
-            if(close == true){
-                document.getElementById('ac-wrapper').removeAttribute('style');
-                close = !close
-                console.log(close);
-            }else if (close == false){
-                document.getElementById('ac-wrapper').style.display = "none";
-            }
-            // if (hideOrshow == 'hide') document.getElementById('ac-wrapper').style.display = "none";
-            //document.getElementById('ac-wrapper').removeAttribute('style');
-            // console.log(document.getElementById('ac-wrapper'))
+            document.getElementById('ac-wrapper').removeAttribute('style');
             aboutAllLetters.map((inf) => {
                 if(inf.id == index){
                     let boxForMainLetter = document.getElementById("boxForGeneralLetter");
                     boxForMainLetter.innerHTML = inf.letter;
-                    
+
                     let boxForWord = document.getElementById("littleElement");
                     boxForWord.innerHTML = inf.word
                     if(inf.word == "Երևան"){
@@ -43,11 +37,12 @@ window.onload = () => {
 
 
                     
+                    
+                    let voice = document.querySelector("#myAudio");
+                    voice.src = inf.voice
 
-                    // let boxForVoice = document.getElementById("forVoice");
-                    // let audio = document.createElement("audio");
-                    // audio.innerHTML = inf.voice;
-                    // boxForVoice.innerHTML = audio;
+                   
+                    
 
                     let boxForTranscription = document.getElementById("transcription");
                     boxForTranscription.innerHTML = inf.transcription;
@@ -74,7 +69,27 @@ window.onload = () => {
         } )
   
     });
+
+    document.getElementById('ac-wrapper').addEventListener("click",function outsideClick(event) {
+        if (
+          event.target.matches("#closeButton") ||
+          !event.target.closest("#popup")
+        ) {
+            closePopUp()
+        }
+      },
+      false
+    )
+
 }
+function voiceSpeaker(){
+    document.querySelector("#myAudio").play()
+
+}
+
+
+
+
 
 
 const aboutAllLetters = [
