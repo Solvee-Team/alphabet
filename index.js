@@ -9,7 +9,6 @@ window.onload = () => {
         letterDivs.className = "allLetter";
         letterDivs.innerHTML = val.letter;
         allLetersParent.appendChild(letterDivs)
- 
     })
     let allDiv = document.querySelectorAll(".allLetter");
     allDiv.forEach((value,index) => {
@@ -21,13 +20,12 @@ window.onload = () => {
                     boxForMainLetter.innerHTML = inf.letter;
 
                     let boxForWord = document.getElementById("littleElement");
-                    boxForWord.innerHTML = inf.word
+                    boxForWord.innerHTML = inf.word;
                     if(inf.word == "Երևան"){
                         let word = document.getElementById("littleElement").innerHTML
                         let newWord= word.replace("և", '<span style="color: rgba(122, 8, 33, 1);">և</span>');
                         document.getElementById("littleElement").innerHTML = newWord;
-
-                    }
+                    };
                     
                     let boxForLetterInOtherAlphabet = document.getElementById("otherAlphabet");
                     boxForLetterInOtherAlphabet.innerHTML = inf.letterInTheOtherAlphabet;
@@ -35,14 +33,9 @@ window.onload = () => {
                     let boxForLetterInEnglish = document.getElementById("inEnglish");
                     boxForLetterInEnglish.innerHTML = inf.letterInEnglish;
 
-
-                    
                     
                     let voice = document.querySelector("#myAudio");
-                    voice.src = inf.voice
-
-                   
-                    
+                    voice.src = inf.voice;
 
                     let boxForTranscription = document.getElementById("transcription");
                     boxForTranscription.innerHTML = inf.transcription;
@@ -56,39 +49,31 @@ window.onload = () => {
                         document.querySelector("#inEnglish").classList.add("styleNone");
                         
                     }else {
-                        document.querySelector("#letterInTheOtherAlphabet").classList.remove("styleNone")
+                        document.querySelector("#letterInTheOtherAlphabet").classList.remove("styleNone");
                         document.querySelector("#word").classList.remove("heightreplacement");
                         document.querySelector("#voice").classList.remove("heightreplacement");
                         document.querySelector("#word").classList.remove("borderColor");
-                    }
-
-                }
-                
+                        document.querySelector("#otherAlphabet").classList.remove("styleNone");
+                        document.querySelector("#inEnglish").classList.remove("styleNone");
+                    };
+                };
             });
-
-        } )
-  
+        });
     });
 
     document.getElementById('ac-wrapper').addEventListener("click",function outsideClick(event) {
-        if (
-          event.target.matches("#closeButton") ||
-          !event.target.closest("#popup")
-        ) {
+        if (event.target.matches("#closeButton") || !event.target.closest("#popup")) {
             closePopUp()
         }
       },
       false
     )
-
 }
+
 function voiceSpeaker(){
     document.querySelector("#myAudio").play()
 
 }
-
-
-
 
 
 

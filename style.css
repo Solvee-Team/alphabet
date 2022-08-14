@@ -41,8 +41,6 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    
-
 }
 #main{
     background-color:#F9F1DE;
@@ -66,15 +64,12 @@
 }
 .allLetter:hover{
     cursor: pointer;
-    background-image: url("images/patternn-04 2.svg");
-    background-position: top;
+    background-image: url("images/hoverFrame.svg");
     transform: scale(1.2);  
     background-size: 100% 100%;
     background-repeat: no-repeat;
     overflow: hidden;
 }
-
-
 #ac-wrapper {
     position: fixed;
     top: 0;
@@ -86,7 +81,6 @@
     display: flex;
     justify-content: center;
     align-items: center;
-
 }
 .imageParent{
     background-image: url("images/frame\ for\ information\ .svg");
@@ -116,8 +110,6 @@
     background: #DBCEB6;
     border-radius: 100px;
     display: flex;
-    
-    
 }
 #boxForGeneralLetter{
     width: 60%;
@@ -143,7 +135,6 @@
     border-radius:50px;
     background-color:rgba(148, 124, 90, 1);
     margin: 10px 0 0 0 ;
-
 }
 #parentForInformation{
     width: 40%;
@@ -186,21 +177,12 @@
     justify-content: center;
     color: rgba(122, 8, 33, 1);
     font-family: "Bokonique";
-
 }
 #otherAlphabet{
     font-size:2.0em;
     font-weight: bold;
     margin: 6px 0;
 }
-
-/* .littleSize{
-    font-size: 10px !important;
-    width: 80% !important;
-}
-.littleDiv{
-    font-size: 15px !important;
-} */
 #transcription{
     color:rgba(255, 255, 255, 1);
     font-family: "Inter";
@@ -214,7 +196,6 @@
     display: flex;
     align-items: center;
     justify-content: space-evenly;
-    
 }
 @font-face {
     font-family: "Armcaps Unicode";
