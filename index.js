@@ -1,7 +1,5 @@
 lineWrapper();
-
 function lineWrapper() {
-
   let data = [
     { id: 0, letter: "Ա", word: "արև", grapar: "այբ", graparEng: "“Ayb”" , voice: "SNDS/A.mp3" , letterOfVoice: "[a]"},
     { id: 1,letter: "Բ",word: "բալ",grapar: "բեն",graparEng: "“Ben”", voice: "SNDS/B.mp3" , letterOfVoice: "[b]"},
@@ -70,34 +68,19 @@ function lineWrapper() {
             word.innerHTML = word.innerHTML.replace('և', '<span style="color: #7A0821;">և</span>');
             word.classList.add("justifyCenter");
           }
-
-          let w = window.innerWidth;
-          if(w !== undefined ) { 
-            if(w > 881 && word.innerHTML.length > 5){
-              word.style.fontSize = "16px";
-            } else if(w > 881 && word.innerHTML.length < 5){
-              word.style.fontSize = "24px";
-            } else if(w < 881 && w > 572 && word.innerHTML.length > 4){      
-              word.style.fontSize = "12px";
-            } else if(w < 881 && w > 572 && word.innerHTML.length < 4){      
-              word.style.fontSize = "20px";
-            } else if(w < 571 && word.innerHTML.length > 4){
-              word.style.fontSize = "8px";
-            } else if(w < 571 && word.innerHTML.length < 4){
-              word.style.fontSize = "16px";
-            }
-        }
-
+ 
           let divForVoiceLetter = document.querySelector('.divForVoiceLetter');
           divForVoiceLetter.innerHTML = obj.letterOfVoice
           if( obj.grapar !== undefined && obj.graparEng !== undefined){
           document.querySelector(".textTop").innerHTML = obj.grapar;
           document.querySelector(".textBottom").innerHTML = obj.graparEng;
+          document.querySelector(".grapar").style.borderBottom = "1px solid #7E6034";
           } else {
             document.querySelector(".textTop").innerHTML = "";
             document.querySelector(".textBottom").innerHTML = "";
+            document.querySelector(".grapar").style.borderBottom = "0px";
           }
-
+          
           document.querySelector(".voiceIcon").addEventListener("click", function () {
             let sound = document.querySelector(".sound");
             sound.src = obj.voice;
