@@ -28,7 +28,7 @@
     grid-template-columns: repeat(9, 1fr);
     gap: 0 20px;
     height: 100vh;
-    padding: 0;
+    padding: 10px;
     margin: 0;
 }
 #allLettersBox div{
@@ -324,3 +324,21 @@
    
 }
 
+@media screen and (min-width: 1390px) and (max-width:2500px){
+    #allLettersBox { 
+        display: grid;
+        grid-template-columns: repeat(9, 1fr);
+        gap: 0 50px;
+        padding:  0 10px;
+        margin: 0;
+    }
+    #allLettersBox div{
+        font-size: 70px;
+
+    }
+    .headerTextStyle{
+        font-size: 50px;
+    }
+    
+    
+}
