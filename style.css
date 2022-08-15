@@ -1,0 +1,357 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+::-webkit-scrollbar {
+    width: 0px;
+    background: transparent;
+}
+.images{
+    height: 100vh;
+    margin: 0;
+    padding:0;
+    
+}
+.firstImage{
+    position: fixed;
+    left: 0;
+}
+.secondImage{
+    position: fixed;
+    right: 0;
+}
+
+#allLettersBox{
+    display: grid;
+    grid-template-columns: repeat(9, 1fr);
+    gap: 0 20px;
+    height: 100vh;
+    padding: 10px;
+    margin: 0;
+    z-index: 2;
+}
+#allLettersBox div{
+    color: #9C1F2A;
+    font-family: 'Armcaps Unicode';
+    font-style: normal;
+    font-size:55px;
+    padding: 5px 5px;
+    width: 90px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#main{
+    background-color:#F9F1DE;
+    display: flex;
+    justify-content: center;
+    width: 100%;  
+}
+#text{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+}
+.headerTextStyle{
+    font-family: "Bokonique";   
+    font-size: 40px;
+    text-shadow: -3px 1px 0 #30171C;
+    text-transform: uppercase;
+    color: #72031A;
+    margin: 30px 0 50px ; 
+}
+.allLetter:hover{
+    cursor: pointer;
+    background-image: url("images/hoverFrame.svg");
+    transform: scale(1.2);  
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    overflow: hidden;
+}
+#ac-wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.9);
+    z-index: 1001;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.imageParent{
+    background-image: url("images/frame\ for\ information\ .svg");
+    background-size:cover;
+    width: 472px;
+    height: 435px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#closeButton{
+    position: fixed;
+    top: 20px;
+    right: 30px;
+    background: none;
+	color:rgba(148, 124, 90, 1);
+	border: none;
+	padding: 20px;
+	cursor: pointer;
+    font-size: 25px;
+    font-weight:bold;
+}
+#popup {
+    width: 414px;
+    max-width: 420px;
+    height: 384px;
+    background: #DBCEB6;
+    border-radius: 100px;
+    display: flex;
+}
+#boxForGeneralLetter{
+    width: 60%;
+    height: 100%;
+    border-width: 0 1px 0 0;
+    border-style: solid;
+    border-color: rgba(126, 96, 52, 1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color:rgba(122, 8, 33, 1);
+    font-family: "Armcaps Unicode";
+    font-size:1300%;
+}
+#littleElement{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgba(255, 255, 255, 1);
+    font-family: "Bokonique";
+    width: 130px;
+    height: 43px;
+    border-radius:50px;
+    background-color:rgba(148, 124, 90, 1);
+    margin: 10px 0 0 0 ;
+}
+#parentForInformation{
+    width: 40%;
+    height: 100%;
+}
+#forVoice button{
+    border: none;
+    background: transparent;
+    cursor: pointer;
+}
+#forVoice{
+    display: flex;
+    align-items: center;
+}
+.styleNone{
+    display: none  !important;
+}
+.borderColor{
+    border-width: 0.5px 0;
+    border-style: solid;
+    border-color: rgba(126, 96, 52, 1);
+}
+.heightreplacement{
+    height: 50% !important;
+}
+.elementsOfInformation{
+    height: 33%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#letterInTheOtherAlphabet{
+    border-width: 1px 0;
+    border-style: solid;
+    border-color: rgba(126, 96, 52, 1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: rgba(122, 8, 33, 1);
+    font-family: "Bokonique";
+}
+#otherAlphabet{
+    font-size:2.0em;
+    font-weight: bold;
+    margin: 6px 0;
+}
+#transcription{
+    color:rgba(255, 255, 255, 1);
+    font-family: "Inter";
+}
+#colorDiv{
+    width: 100px;
+    height: 35px;
+    border-radius:50px;
+    background-color:rgba(148, 124, 90, 1);
+    margin: 0 0 10px 0 ;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+@font-face {
+    font-family: "Armcaps Unicode";
+    src: url("font-styles/ArmcapsU.ttf") ;
+}
+@font-face {
+    font-family: "Bokonique"; 
+    src: url("font-styles/Bokonique-Light.otf");
+}
+
+@media (min-width:400px){
+    #popup{
+        left:calc(50% -277px); 
+    }
+}
+@media screen and (min-width: 0px)  and (max-width:550px){
+    #popup{
+        width: 260px!important;
+        height: 250px!important;
+        border-radius: 70px !important;
+    }
+    .imageParent{
+        width: 307px;
+        height: 286px;  
+    }
+    #letterInTheOtherAlphabet{
+        font-size: 12px;
+    }
+    #littleElement{
+        font-size: 10px !important;
+        width: 80% !important;
+        height: 40%;
+    }
+    #colorDiv{
+        width: 80% !important;
+        height: 35%;
+    }
+    #boxForGeneralLetter{
+        font-size: 120px;
+    }
+    #transcription{
+        font-size: 15px;
+    }
+    .voiceImage{
+        height: 20px;
+        width: 15px;
+    }
+    #forVoice button{
+        height: 20px;
+    }
+    #closeButton{
+        display: none;
+    }
+}
+@media screen and (min-width: 0px)  and (max-width:630px){
+    .images{
+        display: none;
+    }
+}
+
+@media screen and (min-width: 0px) and (max-width:480px) {
+    #allLettersBox { 
+        display: grid;
+        grid-template-columns: repeat(2, 1fr); 
+        overflow: scroll;
+    }
+    .headerTextStyle{
+        font-size: 23px;
+    }
+}
+
+@media screen and (min-width: 481px)  and (max-width:768px){
+    #allLettersBox { 
+        display: grid;
+        grid-template-columns: repeat(3, 1fr); 
+        overflow: scroll;
+    }
+    .headerTextStyle{
+        font-size: 30px;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width:861px){
+    #allLettersBox { 
+        display: grid;
+        grid-template-columns: repeat(4, 1fr); 
+        overflow: scroll; 
+    }
+    .headerTextStyle{
+        font-size: 30px;
+    }
+}
+@media screen and (min-width: 861px) and (max-width:1019px){
+    #allLettersBox { 
+        display: grid;
+        grid-template-columns: repeat(5, 1fr); 
+        overflow: scroll;
+    }
+    .headerTextStyle{
+        font-size: 40px;
+    } 
+}
+@media screen and (min-width: 1020px) and (max-width:1120px){
+    #allLettersBox { 
+        display: grid;
+        grid-template-columns: repeat(6, 1fr); 
+        overflow: scroll;
+    }
+    
+    .headerTextStyle{
+        font-size: 40px;
+    }
+   
+}
+
+@media screen and (min-width: 1110px) and (max-width:1250px){
+    #allLettersBox { 
+        display: grid;
+        grid-template-columns: repeat(7, 1fr); 
+        overflow: scroll;
+    }
+    
+    .headerTextStyle{
+        font-size: 40px;
+    }
+   
+}
+@media screen and (min-width: 1250px) and (max-width:1440px){
+    #allLettersBox { 
+        display: grid;
+        grid-template-columns: repeat(9, 1fr); 
+        overflow: scroll;
+    }
+    
+    .headerTextStyle{
+        font-size: 40px;
+    }
+   
+}
+
+@media screen and (min-width: 1440px) and (max-width:2500px){
+    #allLettersBox { 
+        display: grid;
+        grid-template-columns: repeat(9, 1fr);
+        gap: 0 50px;
+        padding:  0 10px;
+        margin: 0;
+    }
+    #allLettersBox div{
+        font-size: 70px;
+
+    }
+    .headerTextStyle{
+        font-size: 50px;
+    }
+    
+    
+}
