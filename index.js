@@ -84,7 +84,7 @@ const aboutAllLetters = [
         word :"արև",
         letterInTheOtherAlphabet:"այբ",
         letterInEnglish: "“Ayb”",
-        voice: "SNDS/A.mp3",
+        voice: "SNDS/a.mp3",
         transcription: "[a]",
 
     },
