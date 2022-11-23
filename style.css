@@ -14,6 +14,15 @@
     padding:0;
     
 }
+
+.letterU {
+    width: 74px !important;
+    height: 100% !important;
+} 
+.letterEV{
+    width: 74px !important;
+    height: 60px !important;
+} 
 .firstImage{
     position: fixed;
     left: 0;
@@ -32,7 +41,7 @@
     margin: 0;
     z-index: 2;
 }
-#allLettersBox div{
+#allLettersBox div {
     color: #9C1F2A;
     font-family: 'Armcaps Unicode';
     font-style: normal;
@@ -42,6 +51,10 @@
     display: flex;
     align-items: center;
     justify-content: center;
+}
+.allLetter img{
+    width: 45px;
+    height: 50px;
 }
 #main{
     background-color:#F9F1DE;
@@ -70,6 +83,7 @@
     background-size: 100% 100%;
     background-repeat: no-repeat;
     overflow: hidden;
+    transition: 0.4s;
 }
 #ac-wrapper {
     position: fixed;

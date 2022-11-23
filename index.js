@@ -7,7 +7,12 @@ window.onload = () => {
     aboutAllLetters.map( (val,index) => {
         let letterDivs = document.createElement("div");
         letterDivs.className = "allLetter";
-        letterDivs.innerHTML = val.letter;
+
+        const pattern = document.createElement("img");
+    pattern.src = `./assests/${val.letter}.svg`
+    val.letter.length === 2 ? pattern.className = 'letterU' : pattern.className = 'pattern' 
+    val.letter === "ԵՎ" ? pattern.classList.add('letterEV') : '';
+         letterDivs.appendChild(pattern);
         allLetersParent.appendChild(letterDivs)
     })
     let allDiv = document.querySelectorAll(".allLetter");
