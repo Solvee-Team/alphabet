@@ -12,9 +12,6 @@ window.onload = () => {
     pattern.src = `./assests/${val.letter}.svg`
     val.letter.length === 2 ? pattern.className = 'letterU' : pattern.className = 'pattern' 
     val.letter === "ԵՎ" ? pattern.classList.add('letterEV') : '';
-        
-    // divForLetters.appendChild(pattern);
-
          letterDivs.appendChild(pattern);
         allLetersParent.appendChild(letterDivs)
     })
